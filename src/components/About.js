@@ -9,12 +9,12 @@ export default function About() {
             Hi, I'm Anna.
             <br className="hidden lg:inline-block" />I love to build amazing apps.
           </h1>
-          <p className="mb-8 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui laborum quasi, incidunt dolore iste nostrum cupiditate voluptas? Laborum, voluptas natus?</p>
+          <p className="mb-8 leading-relaxed">I'm a Computer Science and Engineering master's student at Technical University of Denmark. I have experience in front-end development and backend development with node.js. I am highly interested in machine learning and data science. </p>
           <div className="flex justify-center">
             <a href="#contact" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
               Work With Me
             </a>
-            <a href="#projects" className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+            <a href="./cv.pdf" target="_blank" download className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
               Download my resume
             </a>
           </div>
