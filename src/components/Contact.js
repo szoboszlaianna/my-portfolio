@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative">
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap justify-around">
+      <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap justify-around">
         <form netlify name="contact" className="lg:w-1/2 md:w-1/2 flex flex-col w-full p-20" onSubmit={handleSubmit}>
           <h2 className="sm:text-4xl text-3xl mb-1 font-medium title-font">Contact Me</h2>
           <div className="relative mb-4">
@@ -35,8 +35,8 @@ export default function Contact() {
               Name
             </label>
             <input
-              onChange={name => {
-                setName(name);
+              onChange={e => {
+                setName(e.target.value);
               }}
               type="text"
               id="name"
@@ -49,8 +49,8 @@ export default function Contact() {
               Email
             </label>
             <input
-              onChange={email => {
-                setEmail(email);
+              onChange={e => {
+                setEmail(e.target.value);
               }}
               type="email"
               id="email"
@@ -63,8 +63,8 @@ export default function Contact() {
               Message
             </label>
             <textarea
-              onChange={message => {
-                setMessage(message);
+              onChange={e => {
+                setMessage(e.target.value);
               }}
               id="message"
               name="message"
