@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Confirmation from "./Confirmation";
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -21,12 +22,18 @@ export default function Contact() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name, email, message })
     })
-      .then(() => alert("Message sent!"))
+      .then(() => {
+        alert("Message sent!");
+        setMessage("");
+        setEmail("");
+        setName("");
+      })
       .catch(error => alert(error));
   }
 
   return (
     <section id="contact" className="relative">
+      <Confirmation />
       <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap justify-around">
         <form netlify name="contact" className="lg:w-1/2 md:w-1/2 flex flex-col w-full p-20" onSubmit={handleSubmit}>
           <h2 className="sm:text-4xl text-3xl mb-1 font-medium title-font">Contact Me</h2>
@@ -38,6 +45,7 @@ export default function Contact() {
               onChange={e => {
                 setName(e.target.value);
               }}
+              value={name}
               type="text"
               id="name"
               name="name"
@@ -53,6 +61,7 @@ export default function Contact() {
                 setEmail(e.target.value);
               }}
               type="email"
+              value={email}
               id="email"
               name="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -66,6 +75,7 @@ export default function Contact() {
               onChange={e => {
                 setMessage(e.target.value);
               }}
+              value={message}
               id="message"
               name="message"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
