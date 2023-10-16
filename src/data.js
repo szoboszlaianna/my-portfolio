@@ -3,7 +3,7 @@ export const projects = [
     title: "PDF magic (in progress)",
     subtitle: "React",
     description:
-      "PDF Magic is an application that provides various PDF functionalities, such as merging PDFs and deleting pages etc. Currently the merge funcionality is implemented.",
+      "PDF Magic is an application that provides various PDF functionalities, such as merging PDFs and deleting pages etc.",
     image: "./pdfmagicdemo.gif",
     link: "https://github.com/szoboszlaianna/pdfmagic",
   },
@@ -45,7 +45,6 @@ export const testimonials = [
 export const skills = [
   "Typescript",
   "React",
-  "Node",
   "Material UI",
   "Python",
   "Fast API",
@@ -53,6 +52,7 @@ export const skills = [
   "HTML&CSS",
   "Postgress",
   "SQL",
+  "Node",
   "Git",
   "Pandas",
   "Data Science",
